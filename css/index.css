@@ -1,0 +1,817 @@
+/*一些共用样式*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	font: 12px/1.5 "Microsoft YaHei", tahoma, arial, "宋体";
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #380;
+}
+
+li {
+	list-style-type: none;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	width: 990px;
+	margin: 0 auto;
+}
+
+.header {
+	padding-top: 30px;  /*用于放置固定导航*/
+}
+
+/*顶部导航*/
+.header_top {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 30px;
+	background: #f8f8f8;
+	border-bottom: 1px solid #ececec;
+	z-index: 999;
+}
+
+.header_nav_left li, .header_nav_right li {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+}
+
+.header_nav_left li a, .header_nav_right li a {
+	padding: 0 10px;
+	margin: 3px 0;
+	color: #666;
+}
+
+.header_nav_left li a:hover {
+	text-decoration: underline;
+	color: #380;
+}
+
+.header_nav_left li:first-child a {
+	cursor: auto;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+}
+
+.header_nav_left li:first-child a, .header_nav_left li:nth-child(2) a, .header_nav_left li:last-child a {
+	border: 0px;
+}
+
+.header_nav_left li a {
+	border-left: 1px solid #ececec;
+}
+
+.header_nav_left li:last-child {
+	background: white;
+	border: 1px solid #ececec;
+	border-top: 0px;
+	border-bottom: 1px solid #fff;
+}
+
+.header_nav_right li:first-child a {
+	font-size: 14px;
+	letter-spacing: 1px;
+	color: #380;
+}
+
+.header_nav_right li a:hover {
+	color: #380;
+}
+
+.header_nav_right li:first-child a i {
+	width: 15px;
+	height: 20px;
+	display: inline-block;
+	background-image: url(http://www1.pchouse.com.cn/header/images/navbar.png);
+	background-position: -9px -289px;
+	position: relative;
+	top: 6px;
+	left: -5px;
+}
+
+/*logo图*/
+.header_logo a {
+	display: block;
+	width: 214px;
+	height: 120px;
+	padding-top: 13px;
+	box-sizing: border-box;
+}
+
+.header_main_nav {
+	height: 45px;
+	background: #333;
+}
+
+.header_main_nav a {
+	display: inline-block;
+}
+
+.header_main_nav li a, .header_main_nav_more {
+	font-size: 16px;
+	color: #fff;
+	padding: 0 9px 0 11px;
+	height: 45px;
+	line-height: 45px;
+}
+
+.header_main_nav>ul>li+li a:hover {
+	color: #77c111;
+}
+
+.header_main_nav ul li {
+	float: left;
+}
+
+.header_main_nav ul li {
+	padding: 0 9px 0 11px;
+}
+
+.header_main_nav>ul>li+li::before {
+	content: "";
+	width: 0px;
+	height: 25px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -6px;
+	border-left: 1px solid #aaa;
+	box-shadow: 0 0 1px 1px #666;
+}
+
+.header_main_nav_active {
+	padding-left: 0 !important;
+}
+
+.header_main_nav_active a {
+	background: #77c111;
+	box-shadow: 0 1px 1px 1px #7c1;
+}
+
+.header_main_nav_more {
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+	padding-right: 28px;
+	border: 1px solid #333;
+	box-sizing: border-box;
+}
+
+.header_main_nav_more i {
+	background-image: url(http://www1.pchouse.com.cn/global/2013/index/images/bgScreen1.png);
+	display: block;
+	width: 9px;
+	height: 5px;
+	line-height: 5px;
+	background-position: -211px -63px;
+	position: relative;
+	top: -22px;
+	left: 43px;
+}
+
+.header_main_nav_more:hover {
+	background: #fff;
+	color: #000;
+	border-bottom-color: #fff;
+	border-top-color: #ccc;
+}
+
+.header_main_nav_more:hover i {
+	background-position: -221px -63px;
+}
+
+.header_main_nav_more ul {
+	display: none;
+	position: absolute;
+	height: 105px;
+	width: 344px;
+	right: 0;
+	top: 45px;
+	z-index: 10;
+	background: white;
+}
+
+.header_main_nav_more:hover ul {
+	border: 1px solid #dcdcdc;
+	border-top: 0px;
+	display: block;
+}
+
+.header_main_nav_more ul li {
+	float: left;
+	padding: 5px 10px;
+}
+
+.header_main_nav_more ul li a {
+	color: black;
+	display: block;
+	height: 24px;
+	line-height: 24px;
+	padding: 0 13px;
+	font-size: 14px;
+}
+
+.header_main_nav_more ul li a:hover {
+	background: #333;
+	color: #ccc !important;
+}
+
+/*内容*/
+.slider {
+	margin-top: 15px;
+	position: relative;
+}
+
+.slider_img {
+	position: relative;
+	overflow: hidden;
+	width: 990px;
+	height: 460px;
+}
+
+.slider_img_box {
+	width: 4950px;
+	position: absolute;
+	transition: all 0.4s;
+	left: 0;
+}
+
+.slider_img_item {
+	position: relative;
+	float: left;
+}
+
+.slider_img_info {
+	width: 400px;
+	height: 80px;
+	position: absolute;
+	top: 330px;
+	left: 50%;
+	margin-left: -200px;
+	background-color: rgba(255, 255, 255, .5);
+}
+
+.slider_img_info h2 {
+	font-weight: normal;
+	font-size: 24px;
+	padding-top: 6px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	width: 360px;
+	border-bottom: 1px #777778 solid;
+	margin: 0 auto;
+}
+
+.slider_img_info h3 {
+	font-weight: normal;
+	font-size: 18px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+}
+
+.slider_tab {
+	height: 20px;
+	width: 990px;
+	text-align: center;
+	position: absolute;
+	bottom: 8px;
+}
+
+.slider_tab span {
+	display: inline-block;
+	margin: 0 2px;
+	width: 40px;
+	height: 6px;
+	line-height: 6px;
+	background-color: #e2e2e2;
+	cursor: pointer;
+}
+
+.slider_tab span.slider_tab_item_active {
+	background-color: #77c111;
+}
+
+.slider_prev, .slider_next {
+	background-image: url(http://www1.pchouse.com.cn/global/2013/index/images/bgScreen1.png);
+	position: absolute;
+	top: 190px;
+	width: 37px;
+	height: 70px;
+	display: block;
+}
+
+.slider_prev {
+	left: -57px;
+	background-position: 0 -89px;
+}
+
+.slider_next {
+	background-position: -76px -89px;
+	right: -57px;
+}
+
+.slider_prev:hover {
+	background-position: -38px -89px;
+}
+
+.slider_next:hover {
+	background-position: -114px -89px;
+}
+
+.cr {
+	margin-top: 50px;
+}
+
+.tab1 {
+	width: 650px;
+	overflow: hidden;
+}
+
+.tab1_nav {
+	width: 652px;
+	margin-left: -1px;
+}
+
+.tab1_nav li {
+	float: left;
+	width: 161px;
+	height: 37px;
+	line-height: 37px;
+	text-align: center;
+	font-size: 18px;/*  border-bottom: 1px solid black;
+	  border-top: 2px solid white;
+	  border-left: 1px solid white;
+	  border-right: 1px solid white;*/
+	border-width: 2px 1px 1px 1px;
+	border-style: solid;
+	border-color: white white black white;
+}
+
+.tab1_nav li.tab1_nav_item_active {
+
+	/*  border-top-color: black;
+	  border-left-color: black;
+	  border-right-color: black;
+	  border-bottom-color: white;*/
+	border-color: black black white black;
+}
+
+.tab1_content {
+	height: 366px;
+	margin-top: 30px;
+	overflow: hidden;
+}
+
+.tab1_content_item {
+	display: none;
+}
+
+.tab1_content_item_active {
+	display: block;
+}
+
+.tab1_info1 a {
+	display: inline-block;
+	width: 190px;
+	margin-right: 36px;
+}
+
+.tab1_info1 a:last-child {
+	margin-right: 0px;
+}
+
+.tab1_info1 a p {
+	text-align: center;
+	font-size: 16px;
+	padding-top: 6px;
+	color: black;
+}
+
+.tab1_info1 a:hover p {
+	color: #380;
+}
+
+.tab1_info2, .tab1_info3 {
+	margin-top: 16px;
+}
+
+.tab1_info2 li {
+	float: left;
+	width: 297px;
+	padding-left: 14px;
+	font-size: 14px;
+	color: #333;
+	height: 33px;
+	line-height: 33px;
+	border-bottom: 1px dotted #ccc;
+	margin-right: 26px;
+	background: url(http://www1.pchouse.com.cn/global/2013/index/images/bgOther.png) no-repeat;
+	background-position: -280px 15px;
+}
+
+.tab1_info2 li:nth-child(2n) {
+	margin-right: 0;
+}
+
+.tab1_info3 {
+	width: 677px;
+	background-color: #f7f7f7;
+	padding: 5px 0 5px 10px;
+}
+
+.tab1_info3 li {
+	float: left;
+	margin-right: 14px;
+	padding-left: 7px;
+	width: 194px;
+	height: 22px;
+	line-height: 22px;
+	color: #777;
+	background: url(http://www1.pchouse.com.cn/global/2013/index/images/bgOther.png) no-repeat;
+	background-position: -280px -10px;
+}
+.tab1_info1_other {
+	height: 37px;
+	line-height: 37px;
+}
+
+.tab1_info1_other li {
+	float: left;
+	margin-right: 20px;
+	color: #777;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.tab1_info1_other .tab1_info1_other_itemJ_active a {
+	color: #380;
+}
+
+.tab1_info1_other_itemJ_active {
+	position: relative;
+}
+
+.tab1_info1_other_itemJ_active::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: -1px;
+	margin-left: -4px;
+	width: 8px;
+	height: 6px;
+	line-height: 6px;
+	background-position: -111px -47px;
+	font-size: 0;
+}
+
+.tab1_info2_other {
+	padding-top: 10px;
+	width: 680px;
+	height: 218px;
+}
+
+.tab1_info2_other li {
+	float: left;
+	margin-right: 30px;
+	width: 140px;
+}
+
+.tab1_info2_other span {
+	display: block;
+	padding: 7px 0 3px;
+}
+
+.tab1_info2_other .tab1_info2-price {
+	padding: 0;
+	color: #f80;
+}
+
+.tab1_info3_other {
+	height: 80px;
+	background-color: #f7f7f7;
+}
+
+.tab1_info3_other>span {
+	float: left;
+	padding: 12px 15px 0 11px;
+	width: 24px;
+	line-height: 14px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.tab1_brands_recomm li {
+	width: 90px;
+	float: left;
+	margin-right: 30px;
+	padding-top: 15px;
+}
+
+.tab1_brands {
+	width: 90px;
+	height: 50px;
+	position: relative;
+	overflow: hidden;
+}
+
+.tab1_brands:hover .tab1_brands_hover_con {
+	position: absolute;
+	width: 90px;
+	background-color: #77c111;
+	color: #fff;
+	line-height: 50px;
+	text-align: center;
+	cursor: pointer;
+	top: 100%;
+	left: 0;
+	visibility: hidden;
+}
+
+.tab1_brands:hover .tab1_brands_hover_con {
+	height: 50px;
+	top: 0;
+	transition: all .5 ease;
+	visibility: visible;
+}
+
+.cr_r {
+	float: right;
+	width: 310px;
+}
+
+.tab2 {
+	margin-bottom: 30px;
+	position: relative;
+	height: 150px;
+	overflow: hidden;
+}
+
+.tab2_nav {
+	line-height: 30px;
+	height: 30px;
+	margin-bottom: 10px;
+}
+
+.tab2_nav li {
+	position: relative;
+	float: left;
+	width: 154px;
+	text-align: center;
+	font-size: 14px;
+	background-color: #f7f7f7;
+}
+
+.tab2_nav li i {
+	background: url(http://www1.pchouse.com.cn/global/2013/index/images/bgOther.png) no-repeat;
+	display: none;
+	position: absolute;
+	left: 50%;
+	bottom: -6px;
+	width: 8px;
+	height: 6px;
+	line-height: 6px;
+	background-position: -111px -47px;
+}
+
+.tab2_nav .tab2_nav_item_active {
+	background: #77c111;
+	color: #fff;
+}
+.tab2_nav .tab2_nav_item_active i{
+	display: block;
+}
+
+.tab2_content_item {
+	display: none;
+}
+
+.tab2_content_item_active {
+	display: block;
+}
+
+.tab2_content_item>a {
+	float: left;
+	display: inline-block;
+}
+
+.tab2_content_item .tab2_info {
+	width: 185px;
+	height: 110px;
+	margin-left: 125px;
+}
+
+.tab2_info h3 {
+	padding-top: 2px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+	color: #77c111;
+	overflow: hidden;
+}
+
+.tab2_info p {
+	height: 44px;
+	line-height: 22px;
+	color: #777;
+	margin-bottom: 5px;
+	padding-top: 8px;
+}
+
+.join {
+	background: url(http://www1.pchouse.com.cn/global/2013/index/images/bgOther.png) no-repeat;
+	float: right;
+	width: 77px;
+	height: 23px;
+	background-position: -89px -104px;
+	color: #fff;
+	padding-left: 15px;
+	line-height: 23px;
+}
+
+.join:hover {
+	color: #fff;
+	background-position: -89px -128px;
+}
+
+.tab3 {
+	height: 227px;
+}
+
+.tab3_nav {
+	width: 80px;
+	float: left;
+}
+
+.tab3_nav a {
+	padding-top: 8px;
+	line-height: 25px;
+	border-top: 1px #fff solid;
+	border-right: 1px #fff solid;
+	border-bottom: 1px #f7f7f7 solid;
+	border-left: 1px #f7f7f7 solid;
+	background-color: #f7f7f7;
+	cursor: pointer;
+	text-align: center;
+	display: block;
+}
+
+.icon {
+	display: block;
+	margin: 0 auto;
+	background: url(http://www1.pchouse.com.cn/global/2013/index/images/bgOther.png) no-repeat;
+}
+
+.tab3_nav .icon1 {
+	width: 24px;
+	height: 28px;
+	background-position: 0 -24px;
+}
+
+.tab3_nav .tab3_nav_item_active a {
+	position: relative;
+	border-top-color: #dcdcdc;
+	border-left: 1px #dcdcdc solid;
+	border-bottom: 1px #dcdcdc solid;
+	background-color: #fff;
+	margin-right: -1px;
+	padding-right: 1px;
+	color: #380;
+}
+
+.tab3_nav .tab3_nav_item_active .icon1 {
+	background-position: 0 -53px;
+}
+
+.tab3_nav .icon2 {
+	width: 29px;
+	height: 26px;
+	background-position: -25px -24px;
+}
+
+.tab3_nav .tab3_nav_item_active .icon2 {
+	background-position: -25px -51px;
+}
+
+.tab3_nav .icon3 {
+	width: 23px;
+	height: 23px;
+	background-position: -55px -24px;
+}
+
+.tab3_nav .tab3_nav_item_active .icon3 {
+	background-position: -55px -48px;
+}
+
+.tab3_nav .icon4 {
+	width: 29px;
+	height: 10px;
+	background-position: -79px -24px;
+}
+
+.tab3_nav .tab3_nav_item_active .icon4 {
+	background-position: -55px -72px;
+}
+
+.tab3_content {
+	float: left;
+	width: 230px;
+	height: 227px;
+	padding: 10px 0 10px 10px;
+	border: 1px #dcdcdc solid;
+	box-sizing: border-box;
+}
+
+.tab3_content_item{
+	display: none;
+}
+.tab3_content_item_active{
+	display: block;
+}
+
+.tab3_content_item ul {
+	height: 56px;
+	margin-bottom: 12px;
+}
+
+.tab3_content_item li {
+	float: left;
+	width: 72px;
+	margin: 4px 0;
+	height: 20px;
+	overflow: hidden;
+}
+.tab3_content_item li a{
+	/*padding: 1px 6px;*/
+/*	padding-left: 6px;
+	padding-top: 1px;*/
+	padding: 0 5px;
+	border: 1px solid white;
+}
+.tab3_content_item li a:hover{
+/*	padding: 0 5px;*/
+	border: 1px solid #77c111;
+}
+
+.footer{
+	padding-top: 15px;
+  color: #777;
+  line-height: 20px;
+  background-color: #f7f7f7;
+}
+.footer_nav{
+	text-align: center;
+}
+.footer_nav a{
+	padding: 0 5px;
+}
+.footer_info{
+	text-align: center;
+	padding: 15px 0;
+}
+.footer_logo{
+	display: inline-block;
+	width: 120px;
+	height: 42px;
+	margin-right: 18px;
+	margin-bottom: 10px;
+	vertical-align: middle;
+}
+.footer_sites, .footer_sites dt, .footer_sites dd{
+	display: inline-block;
+}
+.footer_sites a {
+  padding-right: 8px;
+}
